@@ -178,5 +178,5 @@ body {
 
 /* Obtain accent color from SDK */
 .accent {
-    color: var(--accent-color)
+    color: var(--accent-color) !important
 }
