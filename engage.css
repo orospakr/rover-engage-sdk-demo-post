@@ -3,6 +3,20 @@ body {
     font-feature-settings: "cv02", "cv03", "cv04", "cv11"
 }
 
+@media (prefers-color-scheme: dark) {
+    body {
+        color: white;
+        background-color: black;
+    }
+}
+
+@media(prefers-color-scheme: light) {
+    body {
+        color: black;
+        background-color: white;
+    }
+}
+
 @supports (font-variation-settings:normal) {
     body {
         font-family: InterVariable, sans-serif
@@ -66,6 +80,14 @@ body {
     color: #111827
 }
 
+@media (prefers-color-scheme: dark) {
+    .content h1,
+    .content h2,
+    .content h3 {
+        color: white;
+    }
+}
+
 .content h2 {
     margin-top: 1.75rem;
     font-size: 1.5rem;
@@ -84,8 +106,20 @@ body {
     color: #374151
 }
 
+@media (prefers-color-scheme: dark) {
+    .content p {
+        color: white;
+    }
+}
+
 .content a {
     color: #2563eb
+}
+
+@media (prefers-color-scheme: dark) {
+    .content a {
+        color: #95b3f5;
+    }
 }
 
 .content hr {
@@ -125,6 +159,12 @@ body {
     color: #374151
 }
 
+@media (prefers-color-scheme: dark) {
+    .content ol p,
+    .content ul p {
+        color: white;
+    }
+}
 .content div[data-youtube-video] iframe,
 .content img {
     margin-top: 1rem;
@@ -134,4 +174,9 @@ body {
 
 .content div[data-youtube-video] iframe {
     border: 0
+}
+
+/* Obtain accent color from SDK */
+.accent {
+    color: var(--accent-color)
 }
